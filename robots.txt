@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dilekceyazdirmakistiyorum.com/sitemap.xml

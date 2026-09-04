@@ -1,0 +1,363 @@
+/* ==========================================================================
+   Dilekçe Yazdırmak İstiyorum — tek stil dosyası
+
+   Renkler doğrudan markanın kendi görsellerinden örneklendi:
+   başlık laciverti #022143, koyu bant #051E33, altın #AD863E, krem zemin.
+   Resmî evrak hissi; kütüphane yok, üçüncü parti istek yok.
+   ========================================================================== */
+
+@font-face{
+  font-family:'Jakarta';font-style:normal;font-weight:200 800;font-display:swap;
+  src:url(/assets/fonts/pjs-var-tr.woff2) format('woff2');
+}
+
+:root{
+  --lac:#022143; --lac-2:#051E33; --lac-3:#0B3260; --lac-4:#164a86;
+  --altin:#AD863E; --altin-2:#C9A257; --altin-3:#8E6C2C;
+  --ink:#14202E; --ink-2:#4A5768; --ink-3:#7E8A99;
+  --yuzey:#ffffff; --zemin:#F7F4F0; --zemin-2:#EFEAE2;
+  --cizgi:#E4DCD0; --cizgi-2:#F0EAE0;
+  --yesil:#1E9E62;
+  /* Web4Medya imzası: markanın kendi mavisi #0B57D0 lacivert zeminde okunmuyor. */
+  --w4-mavi:#4D90FF;
+
+  --r1:12px; --r2:18px; --r3:26px;
+  --g1:0 1px 2px rgba(2,33,67,.05), 0 3px 10px rgba(2,33,67,.05);
+  --g2:0 2px 5px rgba(2,33,67,.06), 0 14px 34px rgba(2,33,67,.10);
+  --g3:0 4px 10px rgba(2,33,67,.08), 0 30px 70px rgba(2,33,67,.16);
+  --altin-golge:0 6px 18px rgba(173,134,62,.32);
+  --gecis:.42s cubic-bezier(.22,.68,0,1);
+  --kap:1180px; --ust-h:74px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+/* ⚠️ overflow-x:hidden, position:sticky'yi bozar (gövde kaydırma kabına
+   dönüşür, yapışacak yer kalmaz). overflow-x:clip aynı kırpmayı yapar ama
+   kaydırma kabı OLUŞTURMAZ. Bu yüzden yalnızca html'de tanımlı. */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+     overflow-x:hidden;overflow-x:clip}
+body{
+  margin:0;background:var(--zemin);color:var(--ink);
+  font:16px/1.68 'Jakarta',-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-wrap:break-word;padding-top:var(--ust-h);
+}
+img,video{max-width:100%;height:auto;display:block}
+picture{display:block;max-width:100%}
+a{color:var(--lac-4);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--altin);outline-offset:3px;border-radius:8px}
+.atla{position:absolute;left:-9999px;top:12px;z-index:100;padding:12px 20px;border-radius:999px;
+  background:var(--altin);color:#fff;font-weight:700;box-shadow:var(--altin-golge)}
+.atla:focus{left:12px;text-decoration:none}
+
+h1,h2,h3,h4{line-height:1.16;letter-spacing:-.022em;margin:0 0 .5em;font-weight:800;color:var(--lac)}
+h1{font-size:clamp(2rem,1.3rem + 2.9vw,3.45rem)}
+h2{font-size:clamp(1.55rem,1.18rem + 1.55vw,2.4rem)}
+h3{font-size:clamp(1.08rem,1rem + .42vw,1.32rem)}
+p{margin:0 0 1.05em}
+strong{font-weight:700;color:var(--lac)}
+.kap{width:100%;max-width:var(--kap);margin-inline:auto;padding-inline:clamp(16px,4vw,28px)}
+[id]{scroll-margin-top:calc(var(--ust-h) + 14px)}
+.bolum{padding:clamp(54px,7.5vw,100px) 0}
+.bolum-krem{background:var(--yuzey)}
+.bolum-koyu{background:var(--lac-2);color:#DCE6F2}
+.bolum-koyu h2,.bolum-koyu h3{color:#fff}
+.merkez{text-align:center}
+
+/* Bölüm üstü altın etiket */
+.etiket{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--altin-3);margin-bottom:14px}
+.etiket::before{content:"";width:26px;height:2px;border-radius:2px;background:currentColor}
+.bolum-koyu .etiket{color:var(--altin-2)}
+.spot{color:var(--ink-2);font-size:clamp(1rem,.96rem + .2vw,1.1rem);max-width:66ch}
+.merkez .spot{margin-inline:auto}
+.bolum-koyu .spot{color:#A9BDD8}
+
+/* ── Düğmeler ──────────────────────────────────────────────────────────── */
+.dg{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 24px;border-radius:999px;font-weight:700;font-size:15.5px;line-height:1;
+  border:1px solid transparent;cursor:pointer;text-decoration:none;white-space:nowrap;
+  transition:transform var(--gecis),box-shadow var(--gecis),background var(--gecis),color var(--gecis)}
+.dg:hover{text-decoration:none;transform:translateY(-2px)}
+.dg svg{width:18px;height:18px;flex:none}
+.dg-birincil{background:linear-gradient(180deg,var(--altin-2),var(--altin));color:#fff;
+  box-shadow:var(--altin-golge)}
+.dg-birincil:hover{box-shadow:0 10px 26px rgba(173,134,62,.42);color:#fff}
+.dg-wa{background:linear-gradient(180deg,#2ecb72,#1faa5b);color:#fff;
+  box-shadow:0 6px 18px rgba(31,170,91,.30)}
+.dg-wa:hover{color:#fff;box-shadow:0 10px 26px rgba(31,170,91,.40)}
+.dg-hat{background:transparent;color:var(--lac);border-color:var(--cizgi);
+  box-shadow:inset 0 1px 0 #fff}
+.dg-hat:hover{border-color:var(--altin);color:var(--altin-3);background:#fff}
+.bolum-koyu .dg-hat{color:#fff;border-color:rgba(255,255,255,.28)}
+.bolum-koyu .dg-hat:hover{background:rgba(255,255,255,.08);color:#fff;border-color:var(--altin-2)}
+.dg-kucuk{padding:10px 16px;font-size:14px}
+.dg-gr{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ── Üst bar ───────────────────────────────────────────────────────────── */
+.ust{position:fixed;inset:0 0 auto;z-index:60;height:var(--ust-h);
+  background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--cizgi);transition:box-shadow var(--gecis)}
+.ust.kaydi{box-shadow:0 6px 26px rgba(2,33,67,.09)}
+.ust-ic{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--ust-h)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.logo:hover{text-decoration:none}
+.logo img{width:38px;height:38px;border-radius:9px}
+.logo-yz{display:flex;flex-direction:column;line-height:1.12}
+.logo-yz b{font-size:15px;font-weight:800;color:var(--lac);letter-spacing:-.02em}
+.logo-yz span{font-size:11px;font-weight:600;color:var(--altin-3);letter-spacing:.06em}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{padding:9px 12px;border-radius:9px;font-size:14.5px;font-weight:600;color:var(--ink-2)}
+.menu a:hover{background:var(--zemin-2);color:var(--lac);text-decoration:none}
+.ust-ara{display:flex;align-items:center;gap:10px}
+.menu-dug{display:none;width:42px;height:42px;border:1px solid var(--cizgi);border-radius:11px;
+  background:#fff;cursor:pointer;position:relative}
+.menu-dug span,.menu-dug::before,.menu-dug::after{content:"";position:absolute;left:11px;right:11px;
+  height:2px;border-radius:2px;background:var(--lac);transition:transform var(--gecis),opacity var(--gecis)}
+.menu-dug span{top:20px}.menu-dug::before{top:14px}.menu-dug::after{top:26px}
+.menu-dug[aria-expanded="true"] span{opacity:0}
+.menu-dug[aria-expanded="true"]::before{transform:translateY(6px) rotate(45deg)}
+.menu-dug[aria-expanded="true"]::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* ── Kahraman ──────────────────────────────────────────────────────────── */
+.kahraman{position:relative;padding:clamp(40px,6vw,76px) 0 clamp(52px,7vw,92px);
+  background:
+    radial-gradient(900px 480px at 78% 12%,rgba(173,134,62,.13),transparent 62%),
+    radial-gradient(760px 520px at 6% 86%,rgba(2,33,67,.09),transparent 60%),
+    linear-gradient(180deg,#FBF9F6,var(--zemin));
+  overflow:hidden}
+/* Resmî evrak hissi: zemin üzerinde çok soluk çizgili kâğıt dokusu. */
+.kahraman::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(180deg,transparent 0 33px,rgba(2,33,67,.045) 33px 34px);
+  mask-image:linear-gradient(180deg,transparent,#000 22%,#000 72%,transparent)}
+.kahraman .kap{position:relative}
+.kah-ic{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
+.kah-yz h1{margin-bottom:.42em}
+.kah-yz h1 em{font-style:normal;color:var(--altin);display:block}
+.rozetler{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 22px}
+.rozet{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--cizgi);font-size:13.5px;font-weight:700;color:var(--lac);
+  box-shadow:var(--g1)}
+.rozet svg{width:15px;height:15px;color:var(--altin)}
+.kah-alt{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px;
+  font-size:14px;color:var(--ink-2)}
+.kah-tel{font-size:clamp(1.35rem,1.1rem + 1vw,1.75rem);font-weight:800;color:var(--lac);
+  letter-spacing:-.02em}
+.kah-tel:hover{color:var(--altin-3);text-decoration:none}
+
+/* Görsel çerçevesi: hafif eğik evrak kartı */
+.gorsel-kart{position:relative;border-radius:var(--r3);background:#fff;padding:10px;
+  border:1px solid var(--cizgi);box-shadow:var(--g3)}
+.gorsel-kart img{border-radius:calc(var(--r3) - 10px)}
+.gorsel-kart::after{content:"";position:absolute;inset:0;border-radius:var(--r3);pointer-events:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.egik{transform:rotate(-1.1deg)}
+.egik:nth-child(even){transform:rotate(1.1deg)}
+
+/* ── Güven şeridi ──────────────────────────────────────────────────────── */
+.serit{background:var(--lac);color:#fff}
+.serit-ic{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12)}
+.serit-kt{background:var(--lac);padding:22px 18px;text-align:center}
+.serit-kt svg{width:26px;height:26px;color:var(--altin-2);margin:0 auto 9px}
+.serit-kt b{display:block;font-size:15px;font-weight:700;margin-bottom:2px}
+.serit-kt span{font-size:13px;color:#A9BDD8}
+
+/* ── İkili yerleşim (metin + görsel) ───────────────────────────────────── */
+.ikili{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4.5vw,64px);align-items:center}
+.ikili.ters .ikili-yz{order:2}
+.ikili-yz>:last-child{margin-bottom:0}
+
+/* ── Kartlar / adımlar / liste ─────────────────────────────────────────── */
+.kartlar{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.kart{background:#fff;border:1px solid var(--cizgi);border-radius:var(--r2);padding:22px;
+  box-shadow:var(--g1);transition:transform var(--gecis),box-shadow var(--gecis),border-color var(--gecis)}
+.kart:hover{transform:translateY(-3px);box-shadow:var(--g2);border-color:#DCCDB0}
+.kart h3{margin-bottom:.4em}
+.kart p{margin:0;color:var(--ink-2);font-size:15px}
+.kart-no{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;
+  border-radius:11px;background:var(--lac);color:var(--altin-2);font-weight:800;font-size:15px;
+  margin-bottom:14px}
+.bolum-koyu .kart{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.10)}
+.bolum-koyu .kart p{color:#A9BDD8}
+.bolum-koyu .kart:hover{border-color:rgba(201,162,87,.45)}
+.bolum-koyu .kart-no{background:var(--altin);color:#fff}
+
+.onay{list-style:none;margin:0 0 1.1em;padding:0;display:grid;gap:11px}
+.onay li{position:relative;padding-left:31px;color:var(--ink-2)}
+.onay li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;
+  background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23AD863E'/%3E%3Cpath d='M10.4 16.6 6.2 12.4l1.6-1.6 2.6 2.6 5.8-5.8 1.6 1.6z' fill='%23fff'/%3E%3C/svg%3E") center/20px no-repeat}
+.bolum-koyu .onay li{color:#C4D3E6}
+.bolum-koyu .onay li::before{
+  background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23C9A257'/%3E%3Cpath d='M10.4 16.6 6.2 12.4l1.6-1.6 2.6 2.6 5.8-5.8 1.6 1.6z' fill='%23051E33'/%3E%3C/svg%3E") center/20px no-repeat}
+
+/* ── Fiyat kartı ───────────────────────────────────────────────────────── */
+.fiyat-kt{position:relative;overflow:hidden;background:#fff;border:1px solid var(--cizgi);
+  border-radius:var(--r3);box-shadow:var(--g3)}
+.fiyat-bas{background:var(--lac);color:#fff;padding:16px 24px;font-weight:800;font-size:15px;
+  letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.fiyat-gv{padding:26px 24px 28px;text-align:center}
+.fiyat-tut{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-bottom:18px}
+.fiyat-tut b{font-size:clamp(3rem,2.2rem + 3.4vw,4.6rem);font-weight:800;color:var(--lac);
+  letter-spacing:-.045em;line-height:1}
+.fiyat-tut span{font-size:1.4rem;font-weight:700;color:var(--altin)}
+.fiyat-gv .onay{text-align:left;max-width:340px;margin-inline:auto}
+
+/* ── Video ─────────────────────────────────────────────────────────────── */
+.vid{position:relative;border-radius:var(--r3);overflow:hidden;background:#000;
+  box-shadow:var(--g3);aspect-ratio:16/9}
+.vid video,.vid img{width:100%;height:100%;object-fit:cover}
+.vid-oynat{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  border:0;cursor:pointer;background:linear-gradient(180deg,rgba(2,33,67,.10),rgba(2,33,67,.45))}
+.vid-oynat::after{content:"";width:78px;height:78px;border-radius:50%;
+  background:linear-gradient(180deg,var(--altin-2),var(--altin));box-shadow:0 14px 40px rgba(0,0,0,.42);
+  -webkit-mask:none;transition:transform var(--gecis)}
+.vid-oynat span{position:absolute;width:0;height:0;border-left:22px solid #fff;
+  border-top:14px solid transparent;border-bottom:14px solid transparent;margin-left:6px;
+  pointer-events:none}
+.vid-oynat:hover::after{transform:scale(1.07)}
+
+/* ── SSS ───────────────────────────────────────────────────────────────── */
+.sss{display:grid;gap:12px;max-width:840px;margin-inline:auto}
+.sss details{background:#fff;border:1px solid var(--cizgi);border-radius:var(--r2);
+  box-shadow:var(--g1);overflow:hidden}
+.sss details[open]{border-color:#DCCDB0;box-shadow:var(--g2)}
+.sss summary{list-style:none;cursor:pointer;padding:18px 54px 18px 22px;position:relative;
+  font-weight:700;color:var(--lac);font-size:16px}
+.sss summary::-webkit-details-marker{display:none}
+.sss summary::after{content:"";position:absolute;right:20px;top:50%;width:12px;height:12px;
+  margin-top:-8px;border-right:2.5px solid var(--altin);border-bottom:2.5px solid var(--altin);
+  transform:rotate(45deg);transition:transform var(--gecis)}
+.sss details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+.sss .cvp{padding:0 22px 20px;color:var(--ink-2)}
+.sss .cvp>:last-child{margin-bottom:0}
+
+/* ── İletişim / kapanış ────────────────────────────────────────────────── */
+.cta{position:relative;overflow:hidden;background:var(--lac);color:#fff;border-radius:var(--r3);
+  padding:clamp(30px,4.5vw,54px);text-align:center;box-shadow:var(--g3)}
+.cta::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(600px 300px at 80% 0%,rgba(201,162,87,.22),transparent 60%)}
+.cta *{position:relative}
+.cta h2{color:#fff}
+.cta .spot{color:#B7C8DE;margin-inline:auto}
+.cta .dg-gr{justify-content:center;margin-top:24px}
+
+/* ── Alt bilgi ─────────────────────────────────────────────────────────── */
+.alt{background:var(--lac-2);color:#9FB3CC;padding:clamp(42px,5vw,64px) 0 0;font-size:14.5px}
+.alt a{color:#C7D6E8}
+.alt a:hover{color:#fff}
+.alt-ic{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:34px}
+.alt h4{color:#fff;font-size:14px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.alt-baglar{display:grid;gap:9px}
+.alt-son{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+  padding:18px 0;border-top:1px solid rgba(255,255,255,.09);font-size:13.5px}
+
+/* ── Sabit alt çubuk (mobil) + yüzen WhatsApp ──────────────────────────── */
+.mobil-cubuk{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
+  border-top:1px solid var(--cizgi);padding:9px 10px calc(9px + env(safe-area-inset-bottom));
+  gap:9px;box-shadow:0 -6px 24px rgba(2,33,67,.10)}
+.mobil-cubuk .dg{flex:1;padding:13px 10px}
+.wa-yuzen{position:fixed;right:20px;bottom:22px;z-index:65;width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#2ecb72,#1faa5b);color:#fff;
+  box-shadow:0 10px 30px rgba(31,170,91,.42);transition:transform var(--gecis)}
+.wa-yuzen:hover{transform:scale(1.08)}
+.wa-yuzen svg{width:29px;height:29px}
+
+/* ── Metin yuvaları (yayın öncesi) ─────────────────────────────────────── */
+/* ⚠️ Görünür metinler siteyi işleten kişi tarafından yazılacak. Bu yuvalar
+   metin geldiğinde silinecek — sayfa o ana kadar noindex. */
+.yuva{border:2px dashed var(--altin);border-radius:var(--r2);background:rgba(173,134,62,.06);
+  padding:18px 20px;margin:0 0 18px}
+.yuva-bas{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--altin-3);margin:0 0 8px}
+.yuva-bas::before{content:"✎";font-size:14px}
+.yuva p{margin:0;color:var(--ink-2);font-size:14.5px}
+.yuva p+p{margin-top:8px}
+.bolum-koyu .yuva{background:rgba(201,162,87,.10);border-color:var(--altin-2)}
+.bolum-koyu .yuva p{color:#C4D3E6}
+.bolum-koyu .yuva-bas{color:var(--altin-2)}
+
+/* ── Web4Medya tasarım imzası ──────────────────────────────────────────── */
+/* ⚠️ Rozetin tamamı değil, YALNIZCA marka adı bağlantı (site geneli anahtar
+   kelimeli tasarımcı linki riski). Premium his :has() ile veriliyor. */
+.w4{position:relative;display:flex;justify-content:center;padding:0 0 30px}
+.w4::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:min(380px,66%);height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent)}
+.w4-bag{position:relative;overflow:hidden;isolation:isolate;
+  display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:12px 20px;
+  border-radius:999px;line-height:1;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
+  transition:transform var(--gecis),border-color var(--gecis),
+             box-shadow var(--gecis),background var(--gecis)}
+.w4-bag:has(.w4-ad:hover),.w4-bag:has(.w4-ad:focus-visible){
+  transform:translateY(-2px);border-color:rgba(77,144,255,.45);
+  background:linear-gradient(180deg,rgba(77,144,255,.14),rgba(255,255,255,.02));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.11),0 10px 26px rgba(11,87,208,.30)}
+.w4-bag::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);
+  transform:translateX(-130%)}
+.w4-bag:has(.w4-ad:hover)::after{animation:w4Siyrik .9s cubic-bezier(.3,.7,.3,1)}
+@keyframes w4Siyrik{to{transform:translateX(130%)}}
+.w4-etiket{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:#8FA6CD;transition:color var(--gecis)}
+.w4-etiket::after{content:":";margin-left:2px;opacity:.55}
+.w4-bag:has(.w4-ad:hover) .w4-etiket{color:#C6D5F0}
+.alt .w4-ad{position:relative;font-size:15px;font-weight:800;letter-spacing:.005em;
+  color:#fff;white-space:nowrap;text-decoration:none}
+.alt .w4-ad:hover,.alt .w4-ad:focus-visible{color:#fff;text-decoration:none}
+.alt .w4-ad:focus-visible{outline:2px solid var(--w4-mavi);outline-offset:4px;border-radius:4px}
+.w4-ad::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--w4-mavi),transparent);
+  transform:scaleX(0);transition:transform var(--gecis)}
+.w4-ad:hover::after{transform:scaleX(1)}
+.w4-d{color:var(--w4-mavi);text-shadow:0 0 14px rgba(77,144,255,.55)}
+
+/* ── Kaydırınca beliren öğeler ─────────────────────────────────────────── */
+/* ⚠️ transform SATIR İÇİ verilmez; .egik gibi sınıflar ezilirse görsel düz kalır.
+   Bu yüzden dönüşüm sarmalayıcıya değil, .reveal'ın kendisine yazılıyor. */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.68,0,1)}
+.js .reveal.gorundu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* ── Duyarlı ───────────────────────────────────────────────────────────── */
+@media (max-width:1000px){
+  .serit-ic{grid-template-columns:repeat(2,1fr)}
+  .alt-ic{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu{position:fixed;inset:var(--ust-h) 0 auto;flex-direction:column;align-items:stretch;gap:0;
+    background:#fff;border-bottom:1px solid var(--cizgi);padding:8px 16px 16px;
+    box-shadow:0 20px 40px rgba(2,33,67,.14);
+    transform:translateY(-14px);opacity:0;visibility:hidden;transition:all var(--gecis)}
+  .menu.acik{transform:none;opacity:1;visibility:visible}
+  .menu a{padding:13px 10px;border-bottom:1px solid var(--cizgi-2);border-radius:0}
+  .menu-dug{display:block}
+  .logo-yz b{font-size:13.5px}
+  .logo-yz span{display:none}
+  .ust-ara .dg-metin{display:none}
+  .ust-ara .dg-birincil{padding:11px 13px}
+  .kah-ic,.ikili{grid-template-columns:1fr}
+  .ikili.ters .ikili-yz{order:0}
+  body{padding-bottom:78px}
+  .mobil-cubuk{display:flex}
+  .wa-yuzen{display:none}
+  .alt-ic{grid-template-columns:1fr;gap:26px}
+  .w4{padding-bottom:16px}
+}
+@media (max-width:430px){
+  .logo-yz{display:none}
+  .logo img{width:34px;height:34px}
+}
+@media (max-width:560px){
+  .serit-ic{grid-template-columns:1fr}
+  .egik,.egik:nth-child(even){transform:none}
+}
