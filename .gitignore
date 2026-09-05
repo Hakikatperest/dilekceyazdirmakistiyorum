@@ -1,1 +1,6 @@
 *.bak-*
+images.bak-*/
+
+# calisma dosyalari — yayina girmemeli (index.html ile mukerrer icerik olur)
+icerik-taslak.md
+gorsel-video-aciklamalari.md
