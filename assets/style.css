@@ -80,17 +80,17 @@ strong{font-weight:650;color:var(--metin)}
 }
 .btn svg{flex:none}
 .btn-birincil{
-  background:linear-gradient(180deg,#1D3358 0%,#16294A 55%,#0F2038 100%);
+  background:linear-gradient(180deg,#2E5590 0%,#23457A 55%,#1B3763 100%);
   color:#F5EFE3;border:1px solid rgba(216,174,85,.28);   /* ince altın çizgi: marka bağı */
-  box-shadow:0 6px 0 #050D18,0 14px 26px -8px rgba(10,22,40,.42),
-             inset 0 1px 0 rgba(255,255,255,.14);
+  box-shadow:0 6px 0 #142B4E,0 14px 26px -8px rgba(35,69,122,.38),
+             inset 0 1px 0 rgba(255,255,255,.18);
 }
 .btn-birincil:hover{filter:brightness(1.14);border-color:rgba(216,174,85,.5);
-  box-shadow:0 6px 0 #050D18,0 18px 34px -8px rgba(10,22,40,.5),
-             inset 0 1px 0 rgba(255,255,255,.2)}
+  box-shadow:0 6px 0 #142B4E,0 18px 34px -8px rgba(35,69,122,.46),
+             inset 0 1px 0 rgba(255,255,255,.24)}
 .btn-birincil:active{transform:translateY(5px);
-  box-shadow:0 1px 0 #050D18,0 4px 10px -4px rgba(10,22,40,.4),
-             inset 0 1px 0 rgba(255,255,255,.12)}
+  box-shadow:0 1px 0 #142B4E,0 4px 10px -4px rgba(35,69,122,.36),
+             inset 0 1px 0 rgba(255,255,255,.16)}
 
 .btn-ikincil{
   background:#FFFFFF;color:var(--metin);border:1.5px solid rgba(10,22,40,.22);
@@ -105,8 +105,8 @@ strong{font-weight:650;color:var(--metin)}
 
 .btn-blok{width:100%}
 .btn-kucuk{padding:.72rem 1.25rem;font-size:.94rem;border-radius:12px}
-.btn-birincil.btn-kucuk{box-shadow:0 4px 0 #050D18,0 8px 16px -6px rgba(10,22,40,.35),inset 0 1px 0 rgba(255,255,255,.14)}
-.btn-birincil.btn-kucuk:active{transform:translateY(3px);box-shadow:0 1px 0 #050D18,0 3px 8px -3px rgba(10,22,40,.3)}
+.btn-birincil.btn-kucuk{box-shadow:0 4px 0 #142B4E,0 8px 16px -6px rgba(35,69,122,.32),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-birincil.btn-kucuk:active{transform:translateY(3px);box-shadow:0 1px 0 #142B4E,0 3px 8px -3px rgba(35,69,122,.3)}
 .btn-ikincil.btn-kucuk{box-shadow:0 4px 0 rgba(10,22,40,.10),0 8px 16px -8px rgba(10,22,40,.16),inset 0 1px 0 rgba(255,255,255,.9)}
 .btn-ikincil.btn-kucuk:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(10,22,40,.12)}
 
@@ -210,17 +210,21 @@ strong{font-weight:650;color:var(--metin)}
    butonun ::after'ı arkasına geçemiyordu. */
 .nabizli{position:relative;display:inline-flex;border-radius:14px}
 .nabizli::before{
-  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  content:"";position:absolute;
+  /* ⚠️ inset alt tarafta -6px: butonun 3B gölgesi onu 6px daha uzun gösteriyor,
+     hâle yalnız kutuyu sarınca butondan KOPUK duruyordu. */
+  inset:0 0 -6px 0;border-radius:16px;pointer-events:none;
   animation:heroNabiz 2.6s ease-out infinite;
 }
-/* Ara duraklar şart: tek sıçramada saydamlık hemen sıfırlanıyor ve halka
-   döngünün yalnız %14'ünde görünüyordu. Böylece %80'e kadar görünür kalıyor. */
+/* Sert halka yerine bulanık hâle — butondan yayılıyormuş gibi okunur.
+   Ara duraklar şart: tek sıçramada saydamlık hemen sıfırlanıyor ve
+   hâle döngünün yalnız %14'ünde görünüyordu. */
 @keyframes heroNabiz{
-  0%  {box-shadow:0 0 0 0px  rgba(216,174,85,.55)}
-  35% {box-shadow:0 0 0 6px  rgba(216,174,85,.34)}
-  62% {box-shadow:0 0 0 11px rgba(216,174,85,.14)}
-  80% {box-shadow:0 0 0 13px rgba(216,174,85,0)}
-  100%{box-shadow:0 0 0 0px  rgba(216,174,85,0)}
+  0%  {box-shadow:0 0 10px 0px  rgba(216,174,85,.50)}
+  38% {box-shadow:0 0 16px 5px  rgba(216,174,85,.30)}
+  66% {box-shadow:0 0 22px 9px  rgba(216,174,85,.12)}
+  82% {box-shadow:0 0 26px 12px rgba(216,174,85,0)}
+  100%{box-shadow:0 0 10px 0px  rgba(216,174,85,0)}
 }
 /* Fare üzerindeyken nabız durur — kullanıcı zaten fark etmiştir. */
 .nabizli:hover::before{animation-play-state:paused;box-shadow:none}
@@ -449,7 +453,19 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
    19. Sabit WhatsApp çağrısı (sağ alt)
    ============================================================ */
 .sabit-eylem{position:fixed;right:clamp(.9rem,2.5vw,1.6rem);bottom:clamp(.9rem,2.5vw,1.6rem);
-  z-index:70;display:flex}
+  z-index:70;display:flex;transform-origin:85% 50%;
+  animation:waDikkat 3s ease-in-out infinite}
+/* ⚠️ Hareket SARMALAYICIDA — butonun kendi transform'u basma efekti için serbest kalmalı.
+   Salınım döngünün son %14'üne sıkıştırıldı: 3 sn'de bir kısa selam, arada tamamen sakin. */
+@keyframes waDikkat{
+  0%,86%,100%{transform:translateY(0) rotate(0deg)}
+  89%{transform:translateY(-6px) rotate(-2.2deg)}
+  92%{transform:translateY(0)    rotate(1.6deg)}
+  95%{transform:translateY(-3px) rotate(-1deg)}
+  98%{transform:translateY(0)    rotate(0deg)}
+}
+.sabit-eylem:hover{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.sabit-eylem{animation:none}}
 
 .wa-cagri{
   position:relative;display:inline-flex;align-items:center;gap:.7rem;
@@ -562,17 +578,20 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
   background:linear-gradient(135deg,rgba(216,174,85,.13),transparent 55%)}
 .bildirim-ust{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.75rem;position:relative;
   padding-right:1.9rem}   /* kapatma butonuna yer */
-.bildirim-ikon{width:40px;height:40px;flex:none;border-radius:13px;display:grid;place-items:center;
-  background:linear-gradient(180deg,var(--altin-acik),var(--altin));color:#241703;
-  box-shadow:0 3px 0 var(--altin-koyu)}
-.bildirim h3{font-size:1.05rem;margin:.1rem 0 .3rem;line-height:1.3}
-.bildirim-musait{display:flex;align-items:center;gap:.42rem;font-family:'PJS',sans-serif;
-  font-size:.855rem;font-weight:600;color:var(--metin-2)}
-.nokta{width:9px;height:9px;border-radius:50%;background:#25D366;flex:none;
-  box-shadow:0 0 0 0 rgba(37,211,102,.65);animation:nabiz 2.1s infinite}
-@keyframes nabiz{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 9px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.bildirim-avatar{position:relative;width:44px;height:44px;flex:none;border-radius:14px;
+  display:grid;place-items:center;color:#F5EFE3;
+  background:linear-gradient(180deg,#2E5590,#23457A);
+  box-shadow:0 3px 0 #142B4E,inset 0 1px 0 rgba(255,255,255,.18)}
+/* Çevrimiçi noktası — avatarın köşesinde, nabız atıyor */
+.bildirim-nokta{position:absolute;right:-3px;bottom:-3px;width:13px;height:13px;border-radius:50%;
+  background:#25D366;border:2.5px solid var(--zemin-2);
+  box-shadow:0 0 0 0 rgba(37,211,102,.7);animation:nokta 2.1s ease-out infinite}
+@keyframes nokta{0%{box-shadow:0 0 0 0 rgba(37,211,102,.65)}70%{box-shadow:0 0 0 8px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.bildirim h3{font-size:1.03rem;margin:.15rem 0 .25rem;line-height:1.3}
+.bildirim-durum{font-family:'PJS',sans-serif;font-size:.83rem;font-weight:550;
+  color:var(--metin-3);margin:0}
 .bildirim p{font-size:.925rem;color:var(--metin-2);margin:0 0 1rem;position:relative}
-.bildirim .btn{width:100%;position:relative}
+.bildirim .btn{width:100%;position:relative;gap:.5rem}
 .bildirim-kapat{position:absolute;top:.55rem;right:.55rem;width:30px;height:30px;border-radius:9px;
   background:transparent;border:0;color:var(--metin-3);cursor:pointer;display:grid;place-items:center;
   transition:color var(--gecis),background var(--gecis);z-index:2}
@@ -580,7 +599,7 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
 @media (max-width:560px){
   .bildirim{left:.75rem;right:.75rem;width:auto;bottom:calc(.75rem + 58px)}
 }
-@media (prefers-reduced-motion:reduce){.nokta{animation:none}.vurgula{animation:none}}
+@media (prefers-reduced-motion:reduce){.bildirim-nokta{animation:none}.vurgula{animation:none}}
 
 /* ============================================================
    22. Dilekçe yazdırma formu
@@ -654,9 +673,10 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   transition:all var(--gecis);user-select:none;-webkit-tap-highlight-color:transparent}
 .pul span{background:#fff}
 .pul span:hover{border-color:rgba(216,174,85,.55);color:var(--metin)}
-.pul input:checked + span{background:linear-gradient(180deg,var(--altin-acik),var(--altin));
-  color:#241703;border-color:transparent;font-weight:700;
-  box-shadow:0 3px 0 var(--altin-koyu),0 8px 16px -6px rgba(0,0,0,.4)}
+/* Seçili durum birincil butonla aynı dilde: lacivert. */
+.pul input:checked + span{background:linear-gradient(180deg,#2E5590,#23457A);
+  color:#F5EFE3;border-color:rgba(216,174,85,.3);font-weight:700;
+  box-shadow:0 3px 0 #142B4E,0 8px 16px -7px rgba(35,69,122,.4),inset 0 1px 0 rgba(255,255,255,.18)}
 .pul input:focus-visible + span{outline:3px solid var(--altin);outline-offset:3px}
 
 /* onay kutusu */
@@ -676,7 +696,8 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 .ornek b{font-style:normal;color:var(--metin-2)}
 
 /* dosya yükleme */
-.yukle{border:2px dashed var(--cizgi);border-radius:var(--r);padding:1.8rem 1.2rem;text-align:center;
+.yukle{display:block;   /* ⚠️ <label> varsayılan inline — blok çocuklarla kesikli çerçeve parçalanıyordu */
+  border:2px dashed var(--cizgi);border-radius:var(--r);padding:1.8rem 1.2rem;text-align:center;
   cursor:pointer;transition:all var(--gecis);background:var(--cam)}
 .yukle:hover,.yukle[data-uzerinde="1"]{border-color:var(--altin);background:rgba(216,174,85,.08)}
 .yukle svg{color:var(--vurgu);margin-bottom:.6rem}
