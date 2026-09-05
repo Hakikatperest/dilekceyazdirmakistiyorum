@@ -35,6 +35,17 @@
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape') kapat(); });
   }
 
+  /* --- Başlık camı: kaydırınca koyulaşır --- */
+  var ustluk = $('.ustluk');
+  if (ustluk) {
+    var camDurum = function () {
+      if (window.scrollY > 12) ustluk.setAttribute('data-kaydirildi', '1');
+      else ustluk.removeAttribute('data-kaydirildi');
+    };
+    window.addEventListener('scroll', camDurum, { passive: true });
+    camDurum();
+  }
+
   /* --- Yumuşak beliriş --- */
   if (!az && 'IntersectionObserver' in window) {
     var gozcu = new IntersectionObserver(function (girisler) {

@@ -135,9 +135,27 @@ strong{font-weight:650;color:var(--metin)}
 /* ---------- 6. Başlık / gezinme ---------- */
 .ustluk{
   position:sticky;top:0;z-index:60;                /* ⚠️ backdrop-filter burada YIĞIN BAĞLAMI kurar */
-  background:color-mix(in srgb,var(--zemin) 82%,transparent);
-  backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
-  border-bottom:1px solid var(--cizgi-2);
+  background:color-mix(in srgb,var(--zemin) 55%,transparent);
+  backdrop-filter:blur(26px) saturate(190%);-webkit-backdrop-filter:blur(26px) saturate(190%);
+  border-bottom:1px solid transparent;
+  transition:background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+/* Camın üst kenarındaki ince ışık çizgisi — buzlu cam hissini veren detay */
+.ustluk::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.14) 18%,rgba(216,174,85,.30) 50%,rgba(255,255,255,.14) 82%,transparent);
+  opacity:0;transition:opacity .3s ease;
+}
+/* Sayfa kaydırılınca cam koyulaşır ve zeminden ayrılır */
+.ustluk[data-kaydirildi="1"]{
+  background:color-mix(in srgb,var(--zemin) 72%,transparent);
+  box-shadow:0 8px 32px -12px rgba(0,0,0,.55);
+}
+.ustluk[data-kaydirildi="1"]::after{opacity:1}
+:root[data-tema="acik"] .ustluk{background:color-mix(in srgb,#FFFFFF 58%,transparent)}
+:root[data-tema="acik"] .ustluk[data-kaydirildi="1"]{
+  background:color-mix(in srgb,#FFFFFF 76%,transparent);
+  box-shadow:0 8px 28px -14px rgba(10,22,40,.22);
 }
 .ustluk-ic{display:flex;align-items:center;gap:1rem;min-height:72px}
 .marka{display:flex;align-items:center;gap:.65rem;text-decoration:none;font-weight:800;
@@ -364,7 +382,7 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
   .btn:active{transform:none}
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
-  .cam,.ustluk{background:var(--zemin-2)}
+  .cam,.ustluk,.ustluk[data-kaydirildi="1"]{background:var(--zemin-2)}
 }
 @media print{
   .ustluk,.gez,.cagri,.kahraman-btn,.tema-dugme,.menu-dugme,.video-sarmal{display:none!important}
@@ -375,10 +393,11 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
    16. Logo (tema duyarlı)
    ============================================================ */
 .marka img{width:auto;height:38px;border-radius:0}
-.marka .logo-koyu{display:block}
-.marka .logo-acik{display:none}
-:root[data-tema="acik"] .marka .logo-koyu{display:none}
-:root[data-tema="acik"] .marka .logo-acik{display:block}
+/* ⚠️ Kapsam .marka DEĞİL — alt bilgi de aynı logoları kullanıyor. */
+.logo-koyu{display:block}
+.logo-acik{display:none}
+:root[data-tema="acik"] .logo-koyu{display:none}
+:root[data-tema="acik"] .logo-acik{display:block}
 @media (max-width:400px){.marka img{height:32px}}
 
 /* ============================================================
