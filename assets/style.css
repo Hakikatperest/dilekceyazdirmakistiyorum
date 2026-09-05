@@ -202,6 +202,29 @@ strong{font-weight:650;color:var(--metin)}
 .kahraman h1 em{background:none;-webkit-text-fill-color:var(--vurgu);color:var(--vurgu)}
 .kahraman-alt{font-size:clamp(1.04rem,1.5vw,1.2rem);color:var(--metin-2);max-width:38ch;margin-bottom:1.9rem}
 .kahraman-btn{display:flex;flex-wrap:wrap;gap:.85rem;margin-bottom:1.7rem}
+
+/* Hero ana çağrısında nabız.
+   ⚠️ transform:scale DEĞİL box-shadow yayılımı — scale oranlı büyüdüğü için
+   geniş butonda yandaki butonun üstüne taşıyordu. Yayılım sabit px büyür.
+   ⚠️ Halka sarmalayıcıda; .btn'in kendi transform'u yığın bağlamı kurduğu için
+   butonun ::after'ı arkasına geçemiyordu. */
+.nabizli{position:relative;display:inline-flex;border-radius:14px}
+.nabizli::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  animation:heroNabiz 2.6s ease-out infinite;
+}
+/* Ara duraklar şart: tek sıçramada saydamlık hemen sıfırlanıyor ve halka
+   döngünün yalnız %14'ünde görünüyordu. Böylece %80'e kadar görünür kalıyor. */
+@keyframes heroNabiz{
+  0%  {box-shadow:0 0 0 0px  rgba(216,174,85,.55)}
+  35% {box-shadow:0 0 0 6px  rgba(216,174,85,.34)}
+  62% {box-shadow:0 0 0 11px rgba(216,174,85,.14)}
+  80% {box-shadow:0 0 0 13px rgba(216,174,85,0)}
+  100%{box-shadow:0 0 0 0px  rgba(216,174,85,0)}
+}
+/* Fare üzerindeyken nabız durur — kullanıcı zaten fark etmiştir. */
+.nabizli:hover::before{animation-play-state:paused;box-shadow:none}
+@media (prefers-reduced-motion:reduce){.nabizli::before{animation:none}}
 .rozetler{display:flex;flex-wrap:wrap;gap:.5rem .95rem;list-style:none;padding:0;margin:0;
   font-size:.885rem;color:var(--metin-3)}
 .rozetler li{display:flex;align-items:center;gap:.4rem}
