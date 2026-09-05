@@ -559,7 +559,9 @@ figcaption{margin-top:.85rem;font-size:.905rem;color:var(--metin-3);line-height:
   display:flex;gap:.9rem;flex-wrap:wrap}
 .ara-ipucu kbd{background:var(--cam);border:1px solid var(--cizgi);border-radius:5px;padding:.1rem .4rem;
   font-family:ui-monospace,monospace;font-size:.75rem}
-:target{scroll-margin-top:92px}
+/* ⚠️ Burada scroll-margin-top OLMAYACAK: html'deki scroll-padding-top ile
+   toplanıp 180px kayma yapıyordu ve her bağlantı bir önceki bölümde kalıyordu.
+   Tek kaynak: :root'taki scroll-padding-top (72px başlık + 16px pay). */
 .vurgula{animation:vurgu 1.9s ease}
 @keyframes vurgu{0%,22%{background:rgba(216,174,85,.20)}100%{background:transparent}}
 

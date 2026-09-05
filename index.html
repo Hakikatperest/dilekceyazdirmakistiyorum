@@ -27,7 +27,7 @@
       imagesrcset="/images/dilekce-yazdirmak-istiyorum-768.webp 768w, /images/dilekce-yazdirmak-istiyorum-1100.webp 1100w"
       imagesizes="(max-width:900px) 92vw, 480px" fetchpriority="high">
 <script>document.documentElement.className+=' js'</script>
-<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/style.css?v=10">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -109,9 +109,9 @@
       <img src="/images/logo-acik.webp" width="320" height="83" alt="Dilekçe Yazdırmak İstiyorum">
     </a>
     <nav class="gez" id="gez" aria-label="Ana menü">
+      <a href="#nedir">Nedir?</a>
+      <a href="#form">Form</a>
       <a href="#rehber">Rehber</a>
-      <a href="#bilgiler">Bilgiler</a>
-      <a href="#teslim">Teslim</a>
       <a href="#ucret">Ücret</a>
       <a href="#hatalar">Hatalar</a>
       <a class="btn btn-birincil btn-kucuk" href="tel:+905518373004">Hemen Ara</a>
@@ -166,19 +166,150 @@
       Sayfa İçindekiler
     </h2>
     <ol>
-      <li><a href="#video">Videolu anlatım: süreç nasıl işliyor?</a></li>
-      <li><a href="#baslangic">Nereden başlamalıyım?</a></li>
-      <li><a href="#surec">Adım adım: dilekçe yazdırma süreci</a></li>
-      <li><a href="#nedir">Dilekçe yazdırmak nedir?</a></li>
-      <li><a href="#rehber">Kağıt, kenar boşluğu, punto ve düzen</a></li>
-      <li><a href="#bilgiler">Kimlik ve iletişim bilgileri</a></li>
-      <li><a href="#ek-belge">Ek belge nasıl eklenir?</a></li>
-      <li><a href="#teslim">Dilekçe nereye verilir?</a></li>
-      <li><a href="#ucret">Dilekçe yazdırma ücreti ve fiyatları</a></li>
-      <li><a href="#hatalar">En sık yapılan hatalar</a></li>
+      <li><a href="#nedir">Dilekçe Yazdırmak Nedir?</a></li>
+      <li><a href="#baslangic">Dilekçe Yazdırmak İstiyorum, Nereden Başlamalıyım?</a></li>
+      <li><a href="#surec">Dilekçe yazdırma süreci nasıl işler?</a></li>
+      <li><a href="#form">Online Dilekçe Yazdırmak İstiyorsanız Formu Doldurun</a></li>
+      <li><a href="#rehber">Kağıt, Kenar Boşluğu, Punto ve Sayfa Düzeni</a></li>
+      <li><a href="#bilgiler">Dilekçede Kimlik ve İletişim Bilgileri</a></li>
+      <li><a href="#ek-belge">Dilekçeye Ek Belge Nasıl Eklenir?</a></li>
+      <li><a href="#ucret">Dilekçe Yazdırma Ücreti ve Fiyatları</a></li>
+      <li><a href="#teslim">Dilekçe Yazdırdıktan Sonra Nereye Verilir?</a></li>
+      <li><a href="#hatalar">Dilekçe Yazımında En Sık Yapılan Hatalar</a></li>
     </ol>
   </nav>
 </div>
+
+<section class="serit" aria-label="Hizmet özellikleri">
+  <div class="kap">
+    <ul>
+      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg><div><b>Konuya özel yazım</b><span>Hazır şablon değil, sizin olayınıza göre hazırlanır.</span></div></li>
+      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Resmi yazım kuralları</b><span>Kurumların kendi yazışma düzenine uygun biçim.</span></div></li>
+      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.8V12l3.4 2"/></svg><div><b>Hızlı teslim</b><span>Belgeleriniz tamamsa aynı gün hazırlanır.</span></div></li>
+      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg><div><b>Her kuruma uygun</b><span>Belediye, okul, SGK, banka, mahkeme ve daha fazlası.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="bolum bolum-koyu" id="video">
+  <div class="kap kap-dar">
+    <div class="bolum-bas">
+      <span class="etiket">Videolu anlatım</span>
+      <h2>Süreç kırk saniyede</h2>
+      <p>Okumaya vaktiniz yoksa buradan başlayın: aşağıdaki kırk saniyelik videoda, dilekçe yazdırmak isteyen birinin bize ulaştığı andan dilekçeyi kuruma teslim ettiği ana kadar sürecin nasıl işlediğini özetledik.</p>
+    </div>
+    <div class="video-sarmal belir">
+      <video controls preload="none" playsinline poster="/video/poster.webp" width="1280" height="720">
+        <source src="/video/dilekce-yazdirmak-istiyorum.mp4" type="video/mp4">
+        <p>Tarayıcınız video oynatmayı desteklemiyor. <a href="/video/dilekce-yazdirmak-istiyorum.mp4">Videoyu indirin</a>.</p>
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="bolum" id="nedir">
+  <div class="kap kap-dar govde">
+    <div class="bolum-bas">
+      <span class="etiket">Tanım</span>
+      <h2>Dilekçe Yazdırmak Nedir?</h2>
+    </div>
+    <figure class="belir">
+      <img src="/images/dilekce-yazdirmak-nedir-1100.webp"
+           srcset="/images/dilekce-yazdirmak-nedir-768.webp 768w, /images/dilekce-yazdirmak-nedir-1100.webp 1100w, /images/dilekce-yazdirmak-nedir.webp 1536w"
+           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
+           alt="Arzuhalci ile görüşerek dilekçe hazırlatan bir kişinin çalışma sürecini anlatan görsel">
+      <figcaption>Arzuhalci ile görüşürken en çok işinize yarayacak şey, elinizdeki belgelerin tarih sırasına dizilmiş hâlidir. Görüşmeye o sırayla gelin, ilk görüşme yarı yarıya kısalır.</figcaption>
+    </figure>
+    <p>Dilekçe yazdırmak, aşağıda tek tek anlatacağım tüm konuların bir Dilekçeci yani Arzuhalci ile hazırlanması sürecidir. Aklınıza takılan, tam emin olamadığınız konuları Arzuhalci ile paylaşırsınız, Arzuhalci sizlere gerekli soruları sorar ve bilgileri toplar. İhtiyacınıza uygun ve kabul görecek dilekçeyi sizin için hazırlar. Dilekçe yazdırmak aslında kağıt kalemi elinize almak değil, uzman bir Arzuhalci ile çalışmaktır diyebiliriz.</p>
+
+    <h3>Dilekçe ne amaçla yazılır?</h3>
+    <p>Söz uçar, yazı kalır. Aslında bu atasözü tam bir dilekçe atasözüdür. Dilekçe, herhangi bir resmi kuruma yapılan yazılı talep anlamına gelir. Dilekçe türleri farklılık gösterse de Dilek-çe kelimesinden de anlayabileceğimiz gibi, üst makam ya da resmi kurumlarla iletişim için dilekçe kaleme alınır.</p>
+
+    <h3>Hangi durumlarda dilekçe hazırlanır?</h3>
+    <p>Bu konu aslında çok çeşitlidir, köyünüzdeki yol için de dilekçe yazabilirsiniz, senelik izne çıkmak için de dilekçe yazabilirsiniz, ya da örneğin bir okuldan öğrenci belgenizi almak için de dilekçe yazabilirsiniz. Hayatın her alanında dilekçe ihtiyacı karşımıza çıkabilir ve her insan mutlaka bir gün dilekçe yazdırmaya ihtiyaç duyar.</p>
+
+    <h3>Kimler dilekçe yazdırabilir?</h3>
+    <p>Dilekçe yazdırmak için özel bir statü veya unvan gerekmez. Herkes, yaşadığı bir sorunu, talebini veya hakkını resmi mercilere iletmek istediğinde dilekçe hazırlatabilir.</p>
+    <p>Bireyler kendi adlarına, velayet veya vesayet altındaki kişiler adına, şirket ve dernek gibi tüzel kişiler yetkilileri aracılığıyla dilekçe yazdırabilir. Yaş, eğitim düzeyi veya mesleki durum fark etmeksizin, başvuru hakkı bulunan herkes bu yolu kullanabilir. Önemli olan, dilekçenin doğru mercie yöneltilmesi ve gerekli bilgilerin eksiksiz aktarılmasıdır.</p>
+  </div>
+</section>
+
+<section class="bolum bolum-alt" id="baslangic">
+  <div class="kap kap-dar govde">
+    <div class="bolum-bas">
+      <span class="etiket">Başlangıç</span>
+      <h2>Dilekçe Yazdırmak İstiyorum, Nereden Başlamalıyım?</h2>
+    </div>
+    <p>Dilekçe yazdırmak için her şeyden önce dilekçenizi hangi kuruma vereceğinizi kesin olarak bilmeniz gerekir. Yanlış kuruma verilen dilekçe ne kadar doğru yazılsa da maalesef iptal ile sonuçlanabilir. Bu hem sizin vaktinizi harcar, hem de emeğinizin yok olmasına sebep olabilir. Örneğin bir memursunuz ve izin dilekçesi yazdırmak istiyorsunuz, izin dilekçenizi personel işlerinizle hangi birim ilgileniyorsa o birime yazdırmalısınız. Ya da bir mahkemeye dilekçe sunmak istiyorsunuz, dilekçeniz dosyanıza bakan mahkemenin kalemine teslim edilmelidir.</p>
+    <div class="kutu"><p><b>Emin değil misiniz?</b> Dilekçenizi nereye vereceğinize tam emin değilseniz bizlerle <a href="tel:+905518373004">0551 837 30 04</a> numarası üzerinden ücretsiz şekilde iletişime geçebilir ve danışmanlık alabilirsiniz.</p></div>
+
+    <figure class="belir">
+      <img src="/images/dilekce-nasil-yazilir-1100.webp"
+           srcset="/images/dilekce-nasil-yazilir-768.webp 768w, /images/dilekce-nasil-yazilir-1100.webp 1100w, /images/dilekce-nasil-yazilir.webp 1536w"
+           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
+           alt="Dilekçenin yazım aşamalarını gösteren şema: kurum seçimi, konu belirleme, talep cümlesi ve imza bölümü">
+      <figcaption>Metni yazmak ortalama on dakika sürer; asıl iş bu dördünü yazmadan önce netleştirmektir. Kağıda dökmeden önce bu dört maddeyi telefonunuza not alın.</figcaption>
+    </figure>
+
+    <h3>Dilekçe yazdırmak için neler gereklidir?</h3>
+    <p>Dilekçeyi teslim edeceğimiz kurumu tam olarak kesinleştirdikten sonra aslında tek ihtiyacımız olan kalem ve kağıt. Kağıdımız A4 kağıdı olmalı (her kırtasiyeden bulabilirsiniz). Kağıt üzerinde herhangi bir leke, buruşukluk ya da yırtık olmamasına dikkat etmelisiniz. Dilekçe kağıdınız ne kadar temiz gözükürse o kadar kurumsal bir dilekçe hazırlamış olursunuz. Tabii kağıt kadar dilekçe yazımında kullanacağımız kalem de önemlidir. Hiçbir resmi dilekçede kesinlikle kurşun kalem kullanmamalısınız, tükenmez ya da dolma kalem ile dilekçenizi yazmalısınız. Kaleminizin rengi siyah ya da mavi olmalı. Büyük çoğunlukla mavi tükenmez ya da dolma kalemler tercih edilir. Eğer dilekçenizi dijital ortamda hazırlamak yani bilgisayarda yazdırmak istiyorsanız bu da kabul görmektedir. Ancak imza kısmını kesinlikle ıslak imza yani kaleminizle atmalısınız. Bilgisayar ortamında yazılan dilekçelerde ise genellikle kurumsal yazı tipleri olan Helvetica, Arial, Verdana, Futura ve Roboto gibi yazı tipleri kullanılır.</p>
+
+    <h3>Dilekçe yazdırmak için hangi bilgiler gereklidir?</h3>
+    <p>Dilekçe Yazdırmak İstiyorum, Nereden Başlamalıyım? konusunda anlattığım gibi, gerekli olan ilk bilgi dilekçenizi hangi kuruma vermeniz gerektiğidir, sonrasında dilekçenizin konusunu net olarak belirlemeli, niyetinizi kısa ve anlaşılabilir şekilde aktarabilmelisiniz. Dilekçenizde dilekçe tarihi, adınız-soyadınız, iletişim numaranız ve adresiniz, ıslak imzanız mutlaka olmalı. Dilekçe türlerine göre değişmekle beraber ekstra bilgiler de istenebilir. Örneğin bir memursanız sicil numaranız ya da herhangi bir ünvanınız varsa o ünvanınız da dilekçede yer almalıdır.</p>
+
+    <h3>Dilekçenin konusu nasıl belirlenir?</h3>
+    <p>Dilekçenin konusu aslında dilekçenin amacı demektir. Sizler bu dilekçeyi hangi amaçla yazıyorsanız ve ibraz ediyorsanız bunu kısa ve tek cümle ile net şekilde belirtmelisiniz. Unutmayın: Dilekçenize bakan bir makamın bakacağı ilk yer dilekçe konusudur. Bu yüzden anlaşılabilir, net bir konu başlığınız olmalıdır. Sizlere örnek dilekçe konularını aşağıda listeliyorum.</p>
+
+    <div class="izgara izgara-2">
+      <div class="kart"><h4>Eğitim / Okul / Üniversite</h4><ul class="konu-liste">
+        <li>Mazeret sınavı hakkı talebi</li>
+        <li>Mezuniyet belgesi / diploma asıl nüshasının teslimi talebi</li>
+        <li>Daha önce başarılı olunan ders(ler) için muafiyet ve intibak talebi</li>
+        <li>Öğrenim belgesi / öğrenci belgesi düzenlenmesi talebi</li></ul></div>
+      <div class="kart"><h4>İş / İnsan Kaynakları</h4><ul class="konu-liste">
+        <li>Yıllık ücretli izin kullanımı talebi (… gün, … tarihleri arası)</li>
+        <li>İş sözleşmesinin karşılıklı anlaşma ile feshi ve istifa bildirimi</li>
+        <li>Kıdem tazminatı ile ihbar tazminatı ödemesi talebi</li>
+        <li>Son … aya ait maaş bordrolarının yazılı olarak verilmesi talebi</li>
+        <li>Unvan değişikliği / terfi talebi ve yeni görev tanımı önerisi</li></ul></div>
+      <div class="kart"><h4>Belediye ve Yerel Yönetim</h4><ul class="konu-liste">
+        <li>Cadde / sokak üzerindeki yol hakkında çalışma talebi</li>
+        <li>Sokak aydınlatma direği arızası / yanmayan lamba bildirimi</li>
+        <li>İşyeri açma ve çalışma ruhsatı başvurusu</li>
+        <li>Emlak vergisi muafiyeti / indirimi talebi</li></ul></div>
+      <div class="kart"><h4>Resmi Kurum / Kamu ve Banka</h4><ul class="konu-liste">
+        <li>4982 sayılı Bilgi Edinme Hakkı Kanunu kapsamında bilgi ve belge talebi</li>
+        <li>Abonelik sözleşmesinin feshi ve iptal işleminin tamamlanması talebi</li>
+        <li>Adres değişikliği bildirimi ve kayıtların güncellenmesi talebi</li>
+        <li>Kredi kartı aidatının iadesi talebi</li></ul></div>
+      <div class="kart"><h4>Adli / Hukuki Dilekçeler</h4><ul class="konu-liste">
+        <li>Suç duyurusu / ihbar dilekçesi</li>
+        <li>… tarihli karara itiraz dilekçesi</li>
+        <li>Maddi ve manevi tazminat talepli dilekçe</li></ul></div>
+    </div>
+
+    <h3>Dilekçede talep nasıl anlatılmalıdır?</h3>
+    <p>Dilekçe yazdırmak istiyorsunuz ama talep bölümünde mi takıldınız? Dilekçe yazdırırken talep hem açıklayıcı, hem de net bir dille anlatılmalı. Uzun ve gereksiz cümlelerden kaçınılmalı, dilekçede tam olarak hangi konudan bahsettiğinizi, talebinizi sade ve anlaşılır dille anlatmalısınız. Unutmayın: Uzun dilekçe, güçlü dilekçe demek değildir. Hem dilekçenizde anlatım bozukluğu olmamasına hem de dilekçe talebinizi arz ettiğiniz makama anlatabildiğinize emin olmalısınız.</p>
+  </div>
+</section>
+
+<section class="bolum" id="surec">
+  <div class="kap kap-dar govde">
+    <div class="bolum-bas">
+      <span class="etiket">Adım adım</span>
+      <h2>Dilekçe yazdırma süreci nasıl işler?</h2>
+      <p>Dilekçe hazırlama süreci, kişinin yaşadığı olayı ve ulaşmak istediği sonucu kendi sözleriyle aktarmasıyla başlar. Önce başvurunun hangi kurum, makam ya da mahkemeye yapılacağı netleştirilir; ardından konuya uygun bilgiler derlenir ve metin kaleme alınır.</p>
+    </div>
+    <ol class="adimlar">
+      <li class="adim belir"><h3>Amaç ve konu netleştirilir</h3><p>Dilekçenin amacı, neden yazıldığı ve başvurudan beklenen sonuç açıkça belirlenir.</p></li>
+      <li class="adim belir"><h3>Temel veriler toplanır</h3><p>Olayın tarihleri, ilgili kişiler veya kurumlar, varsa dosya numaraları gibi ayrıntılar gözden geçirilir. Dilekçenin kabul görmesi için doğru ve eksiksiz olması büyük önem taşır.</p></li>
+      <li class="adim belir"><h3>Metin oluşturulur</h3><p>Toplanan bilgiler resmi, sade ve anlaşılır bir dilekçe düzeninde yazılır. Dilekçe yazdırmak ve metin konusunda <a href="tel:+905518373004">Online Arzuhalci hizmetimizden</a> yararlanabilirsiniz.</p></li>
+      <li class="adim belir"><h3>Gözden geçirme yapılır</h3><p>İçerik, talepler ve ekler kontrol edilerek gerekli düzeltmeler uygulanır. Asla acele edilmez, yapılan ve fark edilmeyen hatalar dilekçenin reddine sebep olabilir.</p></li>
+      <li class="adim belir"><h3>Başvuru tamamlanır</h3><p>Hazırlanan dilekçe, duruma göre ilgili mahkeme, adliye, kurum ya da elektronik başvuru sistemi üzerinden sunulur. Sonuç bekleme aşamasına geçilir.</p></li>
+    </ol>
+    <p style="margin-top:1.8rem">Başvuru yerinin ve dilekçede bulunması gereken unsurların önceden bilinmesi, sürecin daha düzenli ve sorunsuz ilerlemesini sağlar.</p>
+  </div>
+</section>
 
 <section class="form-bolum" id="form">
   <div class="kap form-kabuk">
@@ -420,138 +551,7 @@
   </div>
 </section>
 
-<section class="serit" aria-label="Hizmet özellikleri">
-  <div class="kap">
-    <ul>
-      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg><div><b>Konuya özel yazım</b><span>Hazır şablon değil, sizin olayınıza göre hazırlanır.</span></div></li>
-      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Resmi yazım kuralları</b><span>Kurumların kendi yazışma düzenine uygun biçim.</span></div></li>
-      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.8V12l3.4 2"/></svg><div><b>Hızlı teslim</b><span>Belgeleriniz tamamsa aynı gün hazırlanır.</span></div></li>
-      <li><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg><div><b>Her kuruma uygun</b><span>Belediye, okul, SGK, banka, mahkeme ve daha fazlası.</span></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="bolum bolum-koyu" id="video">
-  <div class="kap kap-dar">
-    <div class="bolum-bas">
-      <span class="etiket">Videolu anlatım</span>
-      <h2>Süreç kırk saniyede</h2>
-      <p>Okumaya vaktiniz yoksa buradan başlayın: aşağıdaki kırk saniyelik videoda, dilekçe yazdırmak isteyen birinin bize ulaştığı andan dilekçeyi kuruma teslim ettiği ana kadar sürecin nasıl işlediğini özetledik.</p>
-    </div>
-    <div class="video-sarmal belir">
-      <video controls preload="none" playsinline poster="/video/poster.webp" width="1280" height="720">
-        <source src="/video/dilekce-yazdirmak-istiyorum.mp4" type="video/mp4">
-        <p>Tarayıcınız video oynatmayı desteklemiyor. <a href="/video/dilekce-yazdirmak-istiyorum.mp4">Videoyu indirin</a>.</p>
-      </video>
-    </div>
-  </div>
-</section>
-
-<section class="bolum" id="baslangic">
-  <div class="kap kap-dar govde">
-    <div class="bolum-bas">
-      <span class="etiket">Başlangıç</span>
-      <h2>Dilekçe Yazdırmak İstiyorum, Nereden Başlamalıyım?</h2>
-    </div>
-    <p>Dilekçe yazdırmak için her şeyden önce dilekçenizi hangi kuruma vereceğinizi kesin olarak bilmeniz gerekir. Yanlış kuruma verilen dilekçe ne kadar doğru yazılsa da maalesef iptal ile sonuçlanabilir. Bu hem sizin vaktinizi harcar, hem de emeğinizin yok olmasına sebep olabilir. Örneğin bir memursunuz ve izin dilekçesi yazdırmak istiyorsunuz, izin dilekçenizi personel işlerinizle hangi birim ilgileniyorsa o birime yazdırmalısınız. Ya da bir mahkemeye dilekçe sunmak istiyorsunuz, dilekçeniz dosyanıza bakan mahkemenin kalemine teslim edilmelidir.</p>
-    <div class="kutu"><p><b>Emin değil misiniz?</b> Dilekçenizi nereye vereceğinize tam emin değilseniz bizlerle <a href="tel:+905518373004">0551 837 30 04</a> numarası üzerinden ücretsiz şekilde iletişime geçebilir ve danışmanlık alabilirsiniz.</p></div>
-
-    <figure class="belir">
-      <img src="/images/dilekce-nasil-yazilir-1100.webp"
-           srcset="/images/dilekce-nasil-yazilir-768.webp 768w, /images/dilekce-nasil-yazilir-1100.webp 1100w, /images/dilekce-nasil-yazilir.webp 1536w"
-           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
-           alt="Dilekçenin yazım aşamalarını gösteren şema: kurum seçimi, konu belirleme, talep cümlesi ve imza bölümü">
-      <figcaption>Metni yazmak ortalama on dakika sürer; asıl iş bu dördünü yazmadan önce netleştirmektir. Kağıda dökmeden önce bu dört maddeyi telefonunuza not alın.</figcaption>
-    </figure>
-
-    <h3>Dilekçe yazdırmak için neler gereklidir?</h3>
-    <p>Dilekçeyi teslim edeceğimiz kurumu tam olarak kesinleştirdikten sonra aslında tek ihtiyacımız olan kalem ve kağıt. Kağıdımız A4 kağıdı olmalı (her kırtasiyeden bulabilirsiniz). Kağıt üzerinde herhangi bir leke, buruşukluk ya da yırtık olmamasına dikkat etmelisiniz. Dilekçe kağıdınız ne kadar temiz gözükürse o kadar kurumsal bir dilekçe hazırlamış olursunuz. Tabii kağıt kadar dilekçe yazımında kullanacağımız kalem de önemlidir. Hiçbir resmi dilekçede kesinlikle kurşun kalem kullanmamalısınız, tükenmez ya da dolma kalem ile dilekçenizi yazmalısınız. Kaleminizin rengi siyah ya da mavi olmalı. Büyük çoğunlukla mavi tükenmez ya da dolma kalemler tercih edilir. Eğer dilekçenizi dijital ortamda hazırlamak yani bilgisayarda yazdırmak istiyorsanız bu da kabul görmektedir. Ancak imza kısmını kesinlikle ıslak imza yani kaleminizle atmalısınız. Bilgisayar ortamında yazılan dilekçelerde ise genellikle kurumsal yazı tipleri olan Helvetica, Arial, Verdana, Futura ve Roboto gibi yazı tipleri kullanılır.</p>
-
-    <h3>Dilekçe yazdırmak için hangi bilgiler gereklidir?</h3>
-    <p>Dilekçe Yazdırmak İstiyorum, Nereden Başlamalıyım? konusunda anlattığım gibi, gerekli olan ilk bilgi dilekçenizi hangi kuruma vermeniz gerektiğidir, sonrasında dilekçenizin konusunu net olarak belirlemeli, niyetinizi kısa ve anlaşılabilir şekilde aktarabilmelisiniz. Dilekçenizde dilekçe tarihi, adınız-soyadınız, iletişim numaranız ve adresiniz, ıslak imzanız mutlaka olmalı. Dilekçe türlerine göre değişmekle beraber ekstra bilgiler de istenebilir. Örneğin bir memursanız sicil numaranız ya da herhangi bir ünvanınız varsa o ünvanınız da dilekçede yer almalıdır.</p>
-
-    <h3>Dilekçenin konusu nasıl belirlenir?</h3>
-    <p>Dilekçenin konusu aslında dilekçenin amacı demektir. Sizler bu dilekçeyi hangi amaçla yazıyorsanız ve ibraz ediyorsanız bunu kısa ve tek cümle ile net şekilde belirtmelisiniz. Unutmayın: Dilekçenize bakan bir makamın bakacağı ilk yer dilekçe konusudur. Bu yüzden anlaşılabilir, net bir konu başlığınız olmalıdır. Sizlere örnek dilekçe konularını aşağıda listeliyorum.</p>
-
-    <div class="izgara izgara-2">
-      <div class="kart"><h4>Eğitim / Okul / Üniversite</h4><ul class="konu-liste">
-        <li>Mazeret sınavı hakkı talebi</li>
-        <li>Mezuniyet belgesi / diploma asıl nüshasının teslimi talebi</li>
-        <li>Daha önce başarılı olunan ders(ler) için muafiyet ve intibak talebi</li>
-        <li>Öğrenim belgesi / öğrenci belgesi düzenlenmesi talebi</li></ul></div>
-      <div class="kart"><h4>İş / İnsan Kaynakları</h4><ul class="konu-liste">
-        <li>Yıllık ücretli izin kullanımı talebi (… gün, … tarihleri arası)</li>
-        <li>İş sözleşmesinin karşılıklı anlaşma ile feshi ve istifa bildirimi</li>
-        <li>Kıdem tazminatı ile ihbar tazminatı ödemesi talebi</li>
-        <li>Son … aya ait maaş bordrolarının yazılı olarak verilmesi talebi</li>
-        <li>Unvan değişikliği / terfi talebi ve yeni görev tanımı önerisi</li></ul></div>
-      <div class="kart"><h4>Belediye ve Yerel Yönetim</h4><ul class="konu-liste">
-        <li>Cadde / sokak üzerindeki yol hakkında çalışma talebi</li>
-        <li>Sokak aydınlatma direği arızası / yanmayan lamba bildirimi</li>
-        <li>İşyeri açma ve çalışma ruhsatı başvurusu</li>
-        <li>Emlak vergisi muafiyeti / indirimi talebi</li></ul></div>
-      <div class="kart"><h4>Resmi Kurum / Kamu ve Banka</h4><ul class="konu-liste">
-        <li>4982 sayılı Bilgi Edinme Hakkı Kanunu kapsamında bilgi ve belge talebi</li>
-        <li>Abonelik sözleşmesinin feshi ve iptal işleminin tamamlanması talebi</li>
-        <li>Adres değişikliği bildirimi ve kayıtların güncellenmesi talebi</li>
-        <li>Kredi kartı aidatının iadesi talebi</li></ul></div>
-      <div class="kart"><h4>Adli / Hukuki Dilekçeler</h4><ul class="konu-liste">
-        <li>Suç duyurusu / ihbar dilekçesi</li>
-        <li>… tarihli karara itiraz dilekçesi</li>
-        <li>Maddi ve manevi tazminat talepli dilekçe</li></ul></div>
-    </div>
-
-    <h3>Dilekçede talep nasıl anlatılmalıdır?</h3>
-    <p>Dilekçe yazdırmak istiyorsunuz ama talep bölümünde mi takıldınız? Dilekçe yazdırırken talep hem açıklayıcı, hem de net bir dille anlatılmalı. Uzun ve gereksiz cümlelerden kaçınılmalı, dilekçede tam olarak hangi konudan bahsettiğinizi, talebinizi sade ve anlaşılır dille anlatmalısınız. Unutmayın: Uzun dilekçe, güçlü dilekçe demek değildir. Hem dilekçenizde anlatım bozukluğu olmamasına hem de dilekçe talebinizi arz ettiğiniz makama anlatabildiğinize emin olmalısınız.</p>
-  </div>
-</section>
-
-<section class="bolum bolum-alt" id="surec">
-  <div class="kap kap-dar govde">
-    <div class="bolum-bas">
-      <span class="etiket">Adım adım</span>
-      <h2>Dilekçe yazdırma süreci nasıl işler?</h2>
-      <p>Dilekçe hazırlama süreci, kişinin yaşadığı olayı ve ulaşmak istediği sonucu kendi sözleriyle aktarmasıyla başlar. Önce başvurunun hangi kurum, makam ya da mahkemeye yapılacağı netleştirilir; ardından konuya uygun bilgiler derlenir ve metin kaleme alınır.</p>
-    </div>
-    <ol class="adimlar">
-      <li class="adim belir"><h3>Amaç ve konu netleştirilir</h3><p>Dilekçenin amacı, neden yazıldığı ve başvurudan beklenen sonuç açıkça belirlenir.</p></li>
-      <li class="adim belir"><h3>Temel veriler toplanır</h3><p>Olayın tarihleri, ilgili kişiler veya kurumlar, varsa dosya numaraları gibi ayrıntılar gözden geçirilir. Dilekçenin kabul görmesi için doğru ve eksiksiz olması büyük önem taşır.</p></li>
-      <li class="adim belir"><h3>Metin oluşturulur</h3><p>Toplanan bilgiler resmi, sade ve anlaşılır bir dilekçe düzeninde yazılır. Dilekçe yazdırmak ve metin konusunda <a href="tel:+905518373004">Online Arzuhalci hizmetimizden</a> yararlanabilirsiniz.</p></li>
-      <li class="adim belir"><h3>Gözden geçirme yapılır</h3><p>İçerik, talepler ve ekler kontrol edilerek gerekli düzeltmeler uygulanır. Asla acele edilmez, yapılan ve fark edilmeyen hatalar dilekçenin reddine sebep olabilir.</p></li>
-      <li class="adim belir"><h3>Başvuru tamamlanır</h3><p>Hazırlanan dilekçe, duruma göre ilgili mahkeme, adliye, kurum ya da elektronik başvuru sistemi üzerinden sunulur. Sonuç bekleme aşamasına geçilir.</p></li>
-    </ol>
-    <p style="margin-top:1.8rem">Başvuru yerinin ve dilekçede bulunması gereken unsurların önceden bilinmesi, sürecin daha düzenli ve sorunsuz ilerlemesini sağlar.</p>
-  </div>
-</section>
-
-<section class="bolum" id="nedir">
-  <div class="kap kap-dar govde">
-    <div class="bolum-bas">
-      <span class="etiket">Tanım</span>
-      <h2>Dilekçe Yazdırmak Nedir?</h2>
-    </div>
-    <figure class="belir">
-      <img src="/images/dilekce-yazdirmak-nedir-1100.webp"
-           srcset="/images/dilekce-yazdirmak-nedir-768.webp 768w, /images/dilekce-yazdirmak-nedir-1100.webp 1100w, /images/dilekce-yazdirmak-nedir.webp 1536w"
-           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
-           alt="Arzuhalci ile görüşerek dilekçe hazırlatan bir kişinin çalışma sürecini anlatan görsel">
-      <figcaption>Arzuhalci ile görüşürken en çok işinize yarayacak şey, elinizdeki belgelerin tarih sırasına dizilmiş hâlidir. Görüşmeye o sırayla gelin, ilk görüşme yarı yarıya kısalır.</figcaption>
-    </figure>
-    <p>Dilekçe yazdırmak yukarıda anlattığımız tüm konuların bir Dilekçeci yani Arzuhalci ile hazırlanması sürecidir. Aklınıza takılan, tam emin olamadığınız konuları Arzuhalci ile paylaşırsınız, Arzuhalci sizlere gerekli soruları sorar ve bilgileri toplar. İhtiyacınıza uygun ve kabul görecek dilekçeyi sizin için hazırlar. Dilekçe yazdırmak aslında kağıt kalemi elinize almak değil, uzman bir Arzuhalci ile çalışmaktır diyebiliriz.</p>
-
-    <h3>Dilekçe ne amaçla yazılır?</h3>
-    <p>Söz uçar, yazı kalır. Aslında bu atasözü tam bir dilekçe atasözüdür. Dilekçe, herhangi bir resmi kuruma yapılan yazılı talep anlamına gelir. Dilekçe türleri farklılık gösterse de Dilek-çe kelimesinden de anlayabileceğimiz gibi, üst makam ya da resmi kurumlarla iletişim için dilekçe kaleme alınır.</p>
-
-    <h3>Hangi durumlarda dilekçe hazırlanır?</h3>
-    <p>Bu konu aslında çok çeşitlidir, köyünüzdeki yol için de dilekçe yazabilirsiniz, senelik izne çıkmak için de dilekçe yazabilirsiniz, ya da örneğin bir okuldan öğrenci belgenizi almak için de dilekçe yazabilirsiniz. Hayatın her alanında dilekçe ihtiyacı karşımıza çıkabilir ve her insan mutlaka bir gün dilekçe yazdırmaya ihtiyaç duyar.</p>
-
-    <h3>Kimler dilekçe yazdırabilir?</h3>
-    <p>Dilekçe yazdırmak için özel bir statü veya unvan gerekmez. Herkes, yaşadığı bir sorunu, talebini veya hakkını resmi mercilere iletmek istediğinde dilekçe hazırlatabilir.</p>
-    <p>Bireyler kendi adlarına, velayet veya vesayet altındaki kişiler adına, şirket ve dernek gibi tüzel kişiler yetkilileri aracılığıyla dilekçe yazdırabilir. Yaş, eğitim düzeyi veya mesleki durum fark etmeksizin, başvuru hakkı bulunan herkes bu yolu kullanabilir. Önemli olan, dilekçenin doğru mercie yöneltilmesi ve gerekli bilgilerin eksiksiz aktarılmasıdır.</p>
-  </div>
-</section>
-
-<section class="bolum bolum-alt" id="rehber">
+<section class="bolum" id="rehber">
   <div class="kap kap-dar govde">
     <div class="bolum-bas">
       <span class="etiket">Adım adım rehber</span>
@@ -614,7 +614,7 @@
   </div>
 </section>
 
-<section class="bolum" id="bilgiler">
+<section class="bolum bolum-alt" id="bilgiler">
   <div class="kap kap-dar govde">
     <div class="bolum-bas">
       <span class="etiket">Zorunlu bilgiler</span>
@@ -655,7 +655,7 @@
   </div>
 </section>
 
-<section class="bolum bolum-alt" id="ek-belge">
+<section class="bolum" id="ek-belge">
   <div class="kap kap-dar govde">
     <div class="bolum-bas">
       <span class="etiket">Ekler</span>
@@ -695,6 +695,58 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
     <h3>Birden fazla belge nasıl sıralanır?</h3>
     <p>Ekleri, dilekçe metninde geçtikleri sırayla numaralandırın. Metinde önce hangi belgeden bahsettiyseniz o Ek-1 olsun. Olay anlatımınız kronolojikse ekler de doğal olarak tarih sırasına oturur ve inceleyen kişi olayı belgelerden takip edebilir.</p>
     <p>Fiziksel düzende dilekçe her zaman en üstte durur, ekler onun altına numara sırasıyla dizilir. Belgeleri zımbalayabilir ya da ataçla tutturabilirsiniz; kurum evrakı tarayacaksa ataç daha pratiktir, çünkü zımbayı sökerken sayfalar yırtılabiliyor. Ek sayısı fazlaysa her ekin önüne üzerinde "Ek-1", "Ek-2" yazan küçük bir ayırıcı sayfa koymak profesyonel bir dokunuş olur.</p>
+  </div>
+</section>
+
+<section class="bolum bolum-alt" id="ucret">
+  <div class="kap kap-dar govde">
+    <div class="bolum-bas">
+      <span class="etiket">Ücretlendirme</span>
+      <h2>Dilekçe Yazdırma Ücreti ve Fiyatları</h2>
+    </div>
+    <figure class="belir">
+      <img src="/images/dilekce-yazdirma-fiyati-1100.webp"
+           srcset="/images/dilekce-yazdirma-fiyati-768.webp 768w, /images/dilekce-yazdirma-fiyati-1100.webp 1100w, /images/dilekce-yazdirma-fiyati.webp 1536w"
+           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
+           alt="Ofiste ve online dilekçe yazdırma ücretlerini karşılaştıran fiyat görseli">
+      <figcaption>Fiyat sorarken "dilekçe kaç para" demek yerine konunuzu anlatın. Kapsamı bilmeden verilen rakam sonradan değişir; kapsamı bilerek verilen rakam değişmez.</figcaption>
+    </figure>
+
+    <h3>Dilekçe yazdırmak ücretli mi?</h3>
+    <p>Evet, dilekçe yazdırmak ücretlidir. Dilekçenizi ister çalışma ofisi olan Arzuhalcilere, isterseniz de internet üzerinden online dilekçe yazma hizmeti veren Online Arzuhalcilere yazdırabilirsiniz.</p>
+
+    <h3>Dilekçe yazdırma fiyatları nasıl belirlenir?</h3>
+    <p>Ofiste yazdırılan dilekçeler ile online yazdırılan dilekçeler arasında genelde fiyat farkı olur. Örneğin bir ofiste yazdırılan dilekçe 5.000 TL olabilirken, online olarak yazdırılan dilekçe 1.000 TL'dir.</p>
+
+    <div class="fiyat-izgara">
+      <div class="fiyat"><h3>Ofiste Arzuhalci</h3><span class="rakam">5.000 ₺</span><p class="aciklama">Adliye çevresindeki ofisler, ortalama</p></div>
+      <div class="fiyat fiyat-one"><h3>Online Arzuhalci</h3><span class="rakam">1.000 ₺</span><p class="aciklama">Türkiye'nin her yerinden, aynı hizmet</p><a class="btn btn-birincil btn-blok btn-kucuk" href="#form">Formu Doldur</a></div>
+    </div>
+
+    <h3>Dilekçe ücretini belirleyen faktörler nelerdir?</h3>
+    <p>Yukarıdaki rakamlar ortalamadır; asıl fiyatı belirleyen şey kağıda dökülen satır sayısı değil, o satırların arkasındaki emektir. Ücreti etkileyen başlıca faktörler şunlar:</p>
+    <ul>
+      <li><strong>Dilekçenin türü ve konusu:</strong> Bir yıllık izin dilekçesi ile bir idari karara itiraz dilekçesi aynı işçilikte değildir.</li>
+      <li><strong>Araştırma gerekip gerekmediği:</strong> Bazı dilekçeler mevzuat taraması, madde dayanağı ya da emsal inceleme gerektirir; bu, süreyi ciddi şekilde uzatır.</li>
+      <li><strong>Ek belge sayısı ve incelenmesi:</strong> Elinizdeki belgelerin okunması, hangisinin işe yarayacağının ayıklanması ve doğru sırayla düzenlenmesi işin görünmeyen ama en uzun kısmıdır.</li>
+      <li><strong>Aciliyet:</strong> Aynı gün teslim edilmesi gereken bir dilekçe doğal olarak farklı fiyatlanır.</li>
+      <li><strong>Revizyon ihtiyacı:</strong> Kurum eksik bildirdiğinde metnin yeniden düzenlenmesi gerekebilir.</li>
+    </ul>
+
+    <h3>Basit ve kapsamlı dilekçe arasındaki fiyat farkı</h3>
+    <p>Basit dilekçe dediğimiz grup, çerçevesi belli olan ve doğru bilgilerin yerleştirilmesiyle tamamlanan dilekçelerdir: izin dilekçesi, öğrenci belgesi talebi, adres değişikliği bildirimi, abonelik iptali gibi. Bunlar kısa sürede hazırlanır.</p>
+    <p>Kapsamlı dilekçe ise olay anlatımı, tarih sıralaması, mevzuat dayanağı ve ek belge düzeni gerektiren dilekçelerdir: itirazlar, tazminat talepleri, suç duyuruları, kurum içi hak arayışları. Bunlar saatler alır ve hata payı çok daha düşük olmalıdır, çünkü genellikle bir süreye bağlıdır ve ikinci bir şans olmayabilir.</p>
+    <p>Aradaki fark birkaç kata çıkar ve çıkması da doğrudur. Size dürüstçe söyleyeyim: "her dilekçe aynı fiyat" diyen bir yerle çalışırken dikkatli olun. Ya basit bir dilekçeye hak etmediği parayı ödüyorsunuzdur, ya da kapsamlı dilekçeniz hak ettiği emeği görmeden yazılıyordur.</p>
+
+    <h3>Online dilekçe yazdırma fiyatları nasıl belirlenir?</h3>
+    <p>Online hizmetin ofise göre uygun olmasının sebebi işin kalitesi değil, maliyet yapısıdır. Adliye çevresinde ofis kirası ve sabit giderler varken, online çalışmada bunların hiçbiri yoktur. Bu tasarruf doğrudan fiyata yansır.</p>
+    <p>Süreç şöyle işler: telefon veya WhatsApp üzerinden bize durumunuzu anlatırsınız, biz eksik gördüğümüz noktalar için size sorular sorar ve gerekli belgeleri isteriz, dilekçenizi hazırlayıp size dijital olarak göndeririz. Siz çıktısını alır, ıslak imzanızı atar ve ilgili kuruma teslim edersiniz.</p>
+    <p>Bu modelin size kazandırdığı asıl şey para değil, zaman ve mesafe: Türkiye'nin neresinde olursanız olun süreç aynı şekilde işler; yolculuk yapmak, sıra beklemek ya da mesai saatine yetişmek zorunda kalmazsınız.</p>
+
+    <h3>Arzuhalci ve dilekçeci ücretleri nelerdir?</h3>
+    <p>Önce bir yanlış anlaşılmayı düzelteyim: Arzuhalci ve dilekçeci aynı işi yapan kişilerdir, ikisi arasında bir fark aramayın. Halk arasında adliye çevresindekilere Arzuhalci, diğerlerine dilekçeci deniyor, hepsi bu.</p>
+    <p>Ücretler konusunda bilmeniz gereken şu: arzuhalcilik için avukatlık asgari ücret tarifesi gibi bağlayıcı bir tarife yoktur. Bu yüzden fiyatlar şehre, adliyeye yakınlığa ve işin kapsamına göre değişir. Karşınıza çok farklı rakamlar çıkarsa şaşırmayın; önemli olan işin kapsamını baştan netleştirmenizdir.</p>
+    <p>Son olarak sınırı da belirteyim, çünkü bunu bilmek sizin yararınıza: Arzuhalci dilekçenizin metnini hazırlar. Dava takibi, duruşmalara girilmesi ve vekaletle temsil ise avukatlık mesleğinin işidir. Sizin işiniz avukat gerektiriyorsa bunu size baştan söylemek de bizim işimizin bir parçası.</p>
   </div>
 </section>
 
@@ -774,59 +826,7 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
   </div>
 </section>
 
-<section class="bolum bolum-alt" id="ucret">
-  <div class="kap kap-dar govde">
-    <div class="bolum-bas">
-      <span class="etiket">Ücretlendirme</span>
-      <h2>Dilekçe Yazdırma Ücreti ve Fiyatları</h2>
-    </div>
-    <figure class="belir">
-      <img src="/images/dilekce-yazdirma-fiyati-1100.webp"
-           srcset="/images/dilekce-yazdirma-fiyati-768.webp 768w, /images/dilekce-yazdirma-fiyati-1100.webp 1100w, /images/dilekce-yazdirma-fiyati.webp 1536w"
-           sizes="(max-width:820px) 92vw, 720px" width="1536" height="1024" loading="lazy" decoding="async"
-           alt="Ofiste ve online dilekçe yazdırma ücretlerini karşılaştıran fiyat görseli">
-      <figcaption>Fiyat sorarken "dilekçe kaç para" demek yerine konunuzu anlatın. Kapsamı bilmeden verilen rakam sonradan değişir; kapsamı bilerek verilen rakam değişmez.</figcaption>
-    </figure>
-
-    <h3>Dilekçe yazdırmak ücretli mi?</h3>
-    <p>Evet, dilekçe yazdırmak ücretlidir. Dilekçenizi ister çalışma ofisi olan Arzuhalcilere, isterseniz de internet üzerinden online dilekçe yazma hizmeti veren Online Arzuhalcilere yazdırabilirsiniz.</p>
-
-    <h3>Dilekçe yazdırma fiyatları nasıl belirlenir?</h3>
-    <p>Ofiste yazdırılan dilekçeler ile online yazdırılan dilekçeler arasında genelde fiyat farkı olur. Örneğin bir ofiste yazdırılan dilekçe 5.000 TL olabilirken, online olarak yazdırılan dilekçe 1.000 TL'dir.</p>
-
-    <div class="fiyat-izgara">
-      <div class="fiyat"><h3>Ofiste Arzuhalci</h3><span class="rakam">5.000 ₺</span><p class="aciklama">Adliye çevresindeki ofisler, ortalama</p></div>
-      <div class="fiyat fiyat-one"><h3>Online Arzuhalci</h3><span class="rakam">1.000 ₺</span><p class="aciklama">Türkiye'nin her yerinden, aynı hizmet</p><a class="btn btn-birincil btn-blok btn-kucuk" href="#form">Formu Doldur</a></div>
-    </div>
-
-    <h3>Dilekçe ücretini belirleyen faktörler nelerdir?</h3>
-    <p>Yukarıdaki rakamlar ortalamadır; asıl fiyatı belirleyen şey kağıda dökülen satır sayısı değil, o satırların arkasındaki emektir. Ücreti etkileyen başlıca faktörler şunlar:</p>
-    <ul>
-      <li><strong>Dilekçenin türü ve konusu:</strong> Bir yıllık izin dilekçesi ile bir idari karara itiraz dilekçesi aynı işçilikte değildir.</li>
-      <li><strong>Araştırma gerekip gerekmediği:</strong> Bazı dilekçeler mevzuat taraması, madde dayanağı ya da emsal inceleme gerektirir; bu, süreyi ciddi şekilde uzatır.</li>
-      <li><strong>Ek belge sayısı ve incelenmesi:</strong> Elinizdeki belgelerin okunması, hangisinin işe yarayacağının ayıklanması ve doğru sırayla düzenlenmesi işin görünmeyen ama en uzun kısmıdır.</li>
-      <li><strong>Aciliyet:</strong> Aynı gün teslim edilmesi gereken bir dilekçe doğal olarak farklı fiyatlanır.</li>
-      <li><strong>Revizyon ihtiyacı:</strong> Kurum eksik bildirdiğinde metnin yeniden düzenlenmesi gerekebilir.</li>
-    </ul>
-
-    <h3>Basit ve kapsamlı dilekçe arasındaki fiyat farkı</h3>
-    <p>Basit dilekçe dediğimiz grup, çerçevesi belli olan ve doğru bilgilerin yerleştirilmesiyle tamamlanan dilekçelerdir: izin dilekçesi, öğrenci belgesi talebi, adres değişikliği bildirimi, abonelik iptali gibi. Bunlar kısa sürede hazırlanır.</p>
-    <p>Kapsamlı dilekçe ise olay anlatımı, tarih sıralaması, mevzuat dayanağı ve ek belge düzeni gerektiren dilekçelerdir: itirazlar, tazminat talepleri, suç duyuruları, kurum içi hak arayışları. Bunlar saatler alır ve hata payı çok daha düşük olmalıdır, çünkü genellikle bir süreye bağlıdır ve ikinci bir şans olmayabilir.</p>
-    <p>Aradaki fark birkaç kata çıkar ve çıkması da doğrudur. Size dürüstçe söyleyeyim: "her dilekçe aynı fiyat" diyen bir yerle çalışırken dikkatli olun. Ya basit bir dilekçeye hak etmediği parayı ödüyorsunuzdur, ya da kapsamlı dilekçeniz hak ettiği emeği görmeden yazılıyordur.</p>
-
-    <h3>Online dilekçe yazdırma fiyatları nasıl belirlenir?</h3>
-    <p>Online hizmetin ofise göre uygun olmasının sebebi işin kalitesi değil, maliyet yapısıdır. Adliye çevresinde ofis kirası ve sabit giderler varken, online çalışmada bunların hiçbiri yoktur. Bu tasarruf doğrudan fiyata yansır.</p>
-    <p>Süreç şöyle işler: telefon veya WhatsApp üzerinden bize durumunuzu anlatırsınız, biz eksik gördüğümüz noktalar için size sorular sorar ve gerekli belgeleri isteriz, dilekçenizi hazırlayıp size dijital olarak göndeririz. Siz çıktısını alır, ıslak imzanızı atar ve ilgili kuruma teslim edersiniz.</p>
-    <p>Bu modelin size kazandırdığı asıl şey para değil, zaman ve mesafe: Türkiye'nin neresinde olursanız olun süreç aynı şekilde işler; yolculuk yapmak, sıra beklemek ya da mesai saatine yetişmek zorunda kalmazsınız.</p>
-
-    <h3>Arzuhalci ve dilekçeci ücretleri nelerdir?</h3>
-    <p>Önce bir yanlış anlaşılmayı düzelteyim: Arzuhalci ve dilekçeci aynı işi yapan kişilerdir, ikisi arasında bir fark aramayın. Halk arasında adliye çevresindekilere Arzuhalci, diğerlerine dilekçeci deniyor, hepsi bu.</p>
-    <p>Ücretler konusunda bilmeniz gereken şu: arzuhalcilik için avukatlık asgari ücret tarifesi gibi bağlayıcı bir tarife yoktur. Bu yüzden fiyatlar şehre, adliyeye yakınlığa ve işin kapsamına göre değişir. Karşınıza çok farklı rakamlar çıkarsa şaşırmayın; önemli olan işin kapsamını baştan netleştirmenizdir.</p>
-    <p>Son olarak sınırı da belirteyim, çünkü bunu bilmek sizin yararınıza: Arzuhalci dilekçenizin metnini hazırlar. Dava takibi, duruşmalara girilmesi ve vekaletle temsil ise avukatlık mesleğinin işidir. Sizin işiniz avukat gerektiriyorsa bunu size baştan söylemek de bizim işimizin bir parçası.</p>
-  </div>
-</section>
-
-<section class="bolum" id="hatalar">
+<section class="bolum bolum-alt" id="hatalar">
   <div class="kap kap-dar govde">
     <div class="bolum-bas">
       <span class="etiket">Dikkat</span>
@@ -904,9 +904,9 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
       <div>
         <h3>Rehber</h3>
         <ul>
+          <li><a href="#nedir">Dilekçe yazdırmak nedir?</a></li>
           <li><a href="#baslangic">Nereden başlamalıyım?</a></li>
           <li><a href="#surec">Dilekçe yazdırma süreci</a></li>
-          <li><a href="#nedir">Dilekçe yazdırmak nedir?</a></li>
           <li><a href="#rehber">Kağıt, punto ve sayfa düzeni</a></li>
         </ul>
       </div>
@@ -915,6 +915,7 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
         <ul>
           <li><a href="#bilgiler">Kimlik ve iletişim bilgileri</a></li>
           <li><a href="#ek-belge">Ek belge nasıl eklenir?</a></li>
+          <li><a href="#ucret">Ücret ve fiyatlar</a></li>
           <li><a href="#teslim">Dilekçe nereye verilir?</a></li>
           <li><a href="#hatalar">En sık yapılan hatalar</a></li>
         </ul>
@@ -923,7 +924,6 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
         <h3>Hizmet</h3>
         <ul>
           <li><a href="#form">Dilekçe yazdırma formu</a></li>
-          <li><a href="#ucret">Ücret ve fiyatlar</a></li>
           <li><a href="tel:+905518373004">0551 837 30 04</a></li>
           <li><a href="https://wa.me/905518373004" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
@@ -988,6 +988,6 @@ Ek-3: Kuruma ait 20.08.2026 tarih ve 4471 sayılı yazının örneği (2 sayfa)<
   </a>
 </aside>
 
-<script src="/assets/app.js?v=9" defer></script>
+<script src="/assets/app.js?v=10" defer></script>
 </body>
 </html>
