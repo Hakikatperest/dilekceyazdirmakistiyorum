@@ -11,17 +11,6 @@
   /* --- Yıl --- */
   var yil = $('#yil'); if (yil) yil.textContent = new Date().getFullYear();
 
-  /* --- Tema --- */
-  var temaDugme = $('#temaDugme');
-  if (temaDugme) {
-    temaDugme.addEventListener('click', function () {
-      var yeni = kok.getAttribute('data-tema') === 'acik' ? 'koyu' : 'acik';
-      kok.setAttribute('data-tema', yeni);
-      yaz('dyi-tema', yeni);
-      temaDugme.setAttribute('aria-label', yeni === 'acik' ? 'Koyu temaya geç' : 'Açık temaya geç');
-    });
-  }
-
   /* --- Mobil menü --- */
   var menuDugme = $('#menuDugme'), gez = $('#gez');
   if (menuDugme && gez) {
