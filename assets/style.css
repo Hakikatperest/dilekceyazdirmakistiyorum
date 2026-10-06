@@ -747,3 +747,54 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 .talep-no{display:inline-block;font-family:ui-monospace,monospace;font-size:1.05rem;font-weight:700;
   color:var(--vurgu);background:var(--cam);border:1px solid var(--cizgi);border-radius:10px;
   padding:.5rem 1rem;margin:.9rem 0 1.3rem}
+
+/* ---------- 20. İç sayfalar (dilekçe türleri) ---------- */
+.iz ol{list-style:none;margin:0 0 1.1rem;padding:0;display:flex;flex-wrap:wrap;gap:.2rem .5rem;font-size:.84rem;color:var(--metin-3)}
+.iz li+li::before{content:"›";margin-right:.5rem;color:var(--metin-3)}
+.iz a{color:var(--metin-2);text-decoration:none}
+.iz a:hover{text-decoration:underline;text-underline-offset:3px}
+.ic-kahraman{position:relative;overflow:hidden;padding:clamp(2rem,5vw,3.4rem) 0 clamp(1.4rem,3vw,2.2rem)}
+.ic-kahraman::before{content:"";position:absolute;inset:-20% -10% auto;height:420px;z-index:-1;pointer-events:none;
+  background:radial-gradient(50% 55% at 18% 30%,rgba(216,174,85,.10),transparent 66%);filter:blur(20px)}
+.ic-kahraman h1{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.15;margin:0 0 1rem}
+.ic-ozet{font-size:1.08rem;color:var(--metin-2);max-width:68ch;margin:0 0 1.5rem}
+.ic-ozet a{color:var(--vurgu)}
+.ic-tarih{font-size:.84rem;color:var(--metin-3);margin:1.1rem 0 0}
+.ic-govde{padding-bottom:clamp(2rem,5vw,3.5rem)}
+.ic-govde h2{margin-top:2.4rem}
+.ic-govde h3{margin-top:1.6rem}
+.ic-govde blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.2rem;border-left:3px solid var(--altin-acik);color:var(--metin-2);font-style:italic}
+.dilekce-ornek{background:var(--zemin-2);border:1px solid var(--cizgi);border-radius:var(--r);box-shadow:var(--golge-s);
+  padding:clamp(1.2rem,3vw,2rem);margin:1.6rem 0;font-family:ui-serif,Georgia,'Times New Roman',serif;font-size:.97rem;
+  line-height:1.75;white-space:pre-line;color:var(--metin);overflow-wrap:anywhere}
+.dilekce-ornek-bas{display:block;font-family:'PJS',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--vurgu);margin-bottom:.8rem;white-space:normal}
+.ara-cagri{margin:2rem 0;padding:1.3rem 1.5rem;border-radius:var(--r);background:var(--zemin-3);border:1px solid var(--cizgi)}
+.ara-cagri p{margin:0 0 1rem;color:var(--metin-2)}
+.ara-cagri p b{color:var(--metin)}
+.ara-cagri-btn{display:flex;flex-wrap:wrap;gap:.6rem}
+.sss h3{font-size:1.06rem}
+.ic-govde table{width:100%;border-collapse:collapse;margin:1.4rem 0;font-size:.94rem}
+.ic-govde .tablo{overflow-x:auto;margin:1.4rem 0}
+.ic-govde th,.ic-govde td{border:1px solid var(--cizgi);padding:.6rem .75rem;text-align:left;vertical-align:top}
+.ic-govde th{background:var(--zemin-3);font-weight:700}
+.ilgili{padding:clamp(2rem,5vw,3rem) 0;border-top:1px solid var(--cizgi-2)}
+.ilgili h2{font-size:1.35rem;margin:0 0 1rem}
+.ilgili ul{list-style:none;margin:0 0 1rem;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem .9rem}
+@media (max-width:640px){.ilgili ul{grid-template-columns:1fr}}
+.ilgili li a{display:block;padding:.65rem .9rem;border-radius:var(--r-s);background:var(--zemin-2);border:1px solid var(--cizgi);
+  color:var(--metin);text-decoration:none;font-size:.95rem;transition:border-color var(--gecis)}
+.ilgili li a:hover{border-color:var(--vurgu)}
+.ilgili-tum{color:var(--vurgu);font-weight:600;text-decoration:none}
+.tur-gez{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.4rem}
+.tur-gez a{font-size:.85rem;padding:.38rem .75rem;border-radius:999px;border:1px solid var(--cizgi);background:var(--zemin-2);
+  color:var(--metin-2);text-decoration:none}
+.tur-gez a:hover{border-color:var(--vurgu);color:var(--metin)}
+.tur-liste{padding-bottom:clamp(2.5rem,6vw,4rem)}
+.tur-blok{padding-top:2rem}
+.tur-blok h2{font-size:1.4rem;display:flex;align-items:center;gap:.6rem}
+.tur-blok h2 span{font-family:'PJS',sans-serif;font-size:.8rem;font-weight:700;color:var(--vurgu);background:var(--zemin-3);
+  padding:.15rem .55rem;border-radius:999px}
+.tur-blok ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.35rem 1.2rem}
+.tur-blok a{color:var(--metin-2);text-decoration:none;font-size:.95rem;line-height:1.5}
+.tur-blok a:hover{color:var(--vurgu);text-decoration:underline;text-underline-offset:3px}
